@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="app.css">
+    
+</head>
+<body>
+    <section>
+        <h1>Password Generator</h1>
+        <div class="generated-pass">
+            <p id="password-finish">Password</p>
+            <div class="icon" data-tooltip="Copy!" onclick="copyToClipboard()">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 210.107 210.107" style="enable-background:new 0 0 210.107 210.107;" xml:space="preserve">
+                <g>
+                    <path d="M168.506,0H80.235C67.413,0,56.981,10.432,56.981,23.254v2.854h-15.38
+                        c-12.822,0-23.254,10.432-23.254,23.254v137.492c0,12.822,10.432,23.254,23.254,23.254h88.271
+                        c12.822,0,23.253-10.432,23.253-23.254V184h15.38c12.822,0,23.254-10.432,23.254-23.254V23.254C191.76,10.432,181.328,0,168.506,0z
+                            M138.126,186.854c0,4.551-3.703,8.254-8.253,8.254H41.601c-4.551,0-8.254-3.703-8.254-8.254V49.361
+                        c0-4.551,3.703-8.254,8.254-8.254h88.271c4.551,0,8.253,3.703,8.253,8.254V186.854z M176.76,160.746
+                        c0,4.551-3.703,8.254-8.254,8.254h-15.38V49.361c0-12.822-10.432-23.254-23.253-23.254H71.981v-2.854
+                        c0-4.551,3.703-8.254,8.254-8.254h88.271c4.551,0,8.254,3.703,8.254,8.254V160.746z"/>
+                </g>
+                </svg>
+            </div>
+        </div>
+        <aside>
+            <div class="character-lenght">
+                 <p>Character lenght</p>
+                 <div class="character-lenght-value">5</div>
+            </div>
+            <div class="characterRange">
+                <input type="range" min="1" max="20" value="5" class="slider" id="myRange" oninput="changeInput()">
+            </div>
+            <div class="checkbox-group">
+                <div>
+                <input type="checkbox" id="uppercase" name="uppercase" value="false" onchange="updateUppercase(this.value)">
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+            <div>
+                <input type="checkbox" id="lowercase" name="lowercase" value="false" onchange="updateLowercase(this.value)">
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+            <div>
+                <input type="checkbox" id="numbers" name="numbers" value="false" onchange="updateNumbers(this.value)">
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div>
+                <input type="checkbox" id="symbols" name="symbols" value="false" onchange="updateSymbols(this.value)">
+                <label for="symbols">Include Symbols</label>
+            </div>
+            </div>
+            
+            <div class="strenght">
+                <p>Strenght</p>
+                <div class="strenght-visualization">
+                    <div class="strenght-text">low</div>
+                    <span class="strenght-rectangle"></span>
+                    <span class="strenght-rectangle"></span>
+                    <span class="strenght-rectangle"></span>
+                    <span class="strenght-rectangle"></span>
+                </div>
+            </div>
+
+            <div class="generate-button">
+                 <button name="button" type="button" onclick="generatePassword()">
+                    <div class="generate">
+                        <span>Generate</span> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M6 16c1.361-5.928 8-7 8-7v-2l4 3.982-4 4.018v-2s-5.102-.104-8 3zm-4-4c0 
+                            5.514 4.486 10 10 10s10-4.486 10-10-4.486-10-10-10-10 4.486-10 10zm22 0c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12z"/>
+                        </svg>
+                    </div>
+                    
+                </button>
+            </div>
+           
+        </aside>
+    </section>
+</body>
+
+<script src="app.js"></script>
+</html>

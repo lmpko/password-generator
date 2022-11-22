@@ -1,0 +1,283 @@
+
+:root {
+  --main-color: rgb(25, 27, 27);
+  --primary-color: rgb(58, 61, 63);
+  --secondary-color: rgb(45, 153, 91);
+  --primary-font-color: rgb(197, 196, 196);
+  --secondary-font-color: rgb(72, 76, 78);
+  --line-color: rgb(128, 128, 128);
+  --primary-line-color: rgb(185, 45, 45);
+  --secondary-line-color: rgb(98, 7, 7);
+}
+
+body{
+    background-color: var(--main-color) ;
+}
+p{
+    margin: 0;
+}
+
+section{
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+aside{
+    margin-top: 10px;
+    background-color: var(--primary-color);
+}
+
+.generated-pass{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 22px;
+    color: var(--primary-font-color);
+}
+
+section h1{
+   text-align: center;
+   color: var(--secondary-font-color);
+}
+
+.slider{
+    width: 100%;
+    text-align: center;
+}
+
+.character-lenght{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: var(--primary-font-color);
+}
+
+.character-lenght-value{
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.characterRange{
+    padding: 0 15px 0 15px;
+}
+
+
+#myRange {
+    background: linear-gradient(to right, var(--secondary-color) 0%, var(--secondary-color) 22%, var(--main-color) 22%, var(--main-color) 100%);
+    border-radius: 8px;
+    height: 7px;
+    outline: none;
+    -webkit-appearance: none;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    width: 20px;
+    -webkit-appearance: none;
+    height: 20px;
+    background: var(--primary-font-color);
+    border-radius: 50%;
+  }
+
+  input[type='range']::-webkit-slider-thumb:hover, input[type='range']::-webkit-slider-thumb:active {
+    width: 20px;
+    -webkit-appearance: none;
+    height: 20px;
+    background: var(--main-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .checkbox-group{
+    padding: 15px;
+    color:var(--primary-font-color);
+  }
+
+  .checkbox-group > div {
+    margin-bottom: 15px;
+  }
+
+  input[type='checkbox']{
+    width: 18px ;
+    height: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    outline: 2px solid var(--line-color);
+    box-shadow: none;
+    text-align: center;
+    line-height: normal;
+    margin-bottom: -4px ;
+    cursor: pointer;
+  }
+  
+  input[type='checkbox']:checked:after {
+    content: '✔';
+    color: var(--primary-font-color);
+    background-color: var(--secondary-color);
+    padding: 4px 4px 3px 4px;
+  }
+
+  .strenght{
+    background-color: var(--main-color);
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .strenght > div{
+    color: var(--primary-font-color);
+  }
+
+  .strenght span {
+    border: 2px var(--line-color) solid;
+    padding: 5px;
+    margin: 2px;
+    width: 4px;
+    height: 20px;
+  }
+
+  .strenght-rectangle:first-of-type{
+    border: 2px solid var(--secondary-line-color);
+    background: var(--primary-line-color);
+  }
+
+  .strenght-visualization{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .strenght-visualization div{
+    margin-right: 15px;
+  }
+
+  .generate-button{
+    margin: 15px;
+    padding: 15px 0 15px 0;
+  }
+
+button {
+  width: 100%;
+  padding: 15px;
+  text-transform: uppercase;
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  box-sizing: border-box;
+  color: var(--primary-font-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+button:hover,
+button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: var(--secondary-color);
+}
+
+button:hover svg,
+button:active svg{
+  fill: var(--secondary-color);
+}
+
+button:active {
+  opacity: .5;
+}
+
+.icon{
+  width: 25px;
+  height: 25px;
+  fill: var(--secondary-color);
+}
+
+
+[data-tooltip]:before {
+  /* needed - do not touch */
+  content: attr(data-tooltip);
+  position: absolute;
+  opacity: 0;
+  
+  /* customizable */
+  transition: all 0.15s ease;
+  padding: 10px;
+  color: var(--primary-font-color);
+  border-radius: 10px;  
+  font-size: 16px; 
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:focus:before {
+  /* needed - do not touch */
+  opacity: 1;
+  
+  /* customizable */
+  background: rgb(22, 22, 22);
+  margin-top: -45px;
+  margin-left: -25px;    
+}
+
+[data-tooltip]:not([data-tooltip-persistent]):before {
+  pointer-events: none;
+}
+
+svg:hover,
+svg:active{
+  cursor: pointer;
+  fill: var(--primary-font-color);
+}
+
+.generate{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.generate span{
+  margin-right: 10px;
+}
+
+.generate svg{
+  fill: var(--primary-font-color);
+}
+
+@media only screen and (max-width: 796px) {
+    section{
+      max-width: 90%;
+  }
+   
+  .strenght-text{
+    font-size: 13px;
+  }
+
+  .strenght-visualization div {
+    margin-right: 5px;
+  }
+}
